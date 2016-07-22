@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include menu.html %}
+
+<div role="main" class="ta-l ff-serif wrap-medium-box wrap-center-box box-center">
+	<header>
+		<h1 class="wrap-small ta-c">{{ page.title }}</h1>
+
+		{% if page.categories %}
+			{% include pubdate.html %}
+		{% endif %}
+	</header>
+
+	{{ content }}
+
+</div>
+
+{% if page.categories %}
+	{% unless page.no_comments %}
+		{% include comments.html %}
+	{% endunless %}
+{% endif %}
+
+{% include footer.html %}

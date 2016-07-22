@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-variant-ligatures: contextual;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	text-align: center;
+	padding: 6.4rem 3.2rem 5.7rem;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	margin: 0;
+
+	// 1.777 — 3.2rem
+	font: 1.8rem/1.7777777 'PT Sans', "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: #313131;
+	background: #fff;
+
+	// animations
+	-webkit-transition: padding .3s ease-out, opacity .15s ease-in-out;
+	transition: padding .3s ease-out, opacity .15s ease-in-out;
+	opacity: 0;
+
+	// media
+	@media (max-width: 800px) { padding: 6.4rem 3.2rem; }
+	// @media (max-width: 640px) { padding: 6.4rem 3.2rem; }
+	@media (max-width: 480px) { padding: 3.2rem 1.8rem; }
+}

@@ -1,0 +1,11 @@
+<a class="logo" href="/">
+    <img src="/assets/icons/v.svg"
+		 class="pixel-art">
+</a>
+
+<nav>
+    <ul class="menu">
+        <li><a {% unless page.url == "/blog/" %} href="/blog/"{% endunless %}>Блог</a></li>
+        <li><a {% unless page.url contains "/about/" %} href="/about/"{% endunless %}>Обо мне</a></li>
+    </ul>
+</nav>

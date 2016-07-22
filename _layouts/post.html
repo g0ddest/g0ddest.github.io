@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+<article class="wrap-large wrap-medium-box wrap-center-box" itemscope itemtype="http://schema.org/Article">
+	<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ page.url }}">
+	{% include publisher.html %}
+
+	{{ content }}
+</article>
+
+<hr>
+
+{% include next-prev.html %}

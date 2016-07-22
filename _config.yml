@@ -1,0 +1,30 @@
+title: Виталий Великодный
+email: vitaliy@velikodniy.name
+baseurl: ""
+url: "https://vitaliy.velikodniy.name"
+
+# Build settings
+permalink: /:categories/:title/
+excerpt_separator: <!-- more -->
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+sass:
+  style: compressed
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-paginate
+
+permalinks: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+  syntax_highlighter: rouge
+
+exclude:
+  - 'node_modules/**/*'
+  - '*.json'
+  - 'gulpfile.babel.js'

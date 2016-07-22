@@ -1,0 +1,23 @@
+ul, ol {
+	padding: 0 0 0 4.8rem;
+	margin: 0 0 0 2.6rem;
+
+	* + blockquote,
+	* + .highlighter-rouge,
+	* + pre {
+	  margin-top: 0.8rem; /* 0.25 baselines  */
+
+	  &:last-child {
+		  margin-bottom: 2.4rem;
+	  }
+	}
+}
+
+* + ul,
+* + ol {
+	margin-top: 2.4rem;
+}
+
+li + li {
+	margin-top: 0.8rem; /* 0.25 baseline */
+}

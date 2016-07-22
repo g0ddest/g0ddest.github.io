@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+
+	{% include head/head.html %}
+
+	{% if page.categories %}<body class="is_page">{% else %}<body>{% endif %}
+
+		<!-- animated show and hide -->
+		<script>
+			var body = document.getElementsByTagName('body')[0];
+			window.onbeforeunload = function () { body.style.opacity = 0 };
+			window.onpageshow     = function () { body.style.opacity = 1 };
+			setTimeout(function() { body.style.opacity = 1 }, 25);
+		</script>
+		<noscript><style>body { opacity: 1 }</style></noscript>
+
+		{{ content }}
+
+		<link rel="preload" href="/assets/css/main.min.css?{{ site.time | date_to_xmlschema }}" as="style" onload="this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+		<!-- Syntax css -->
+		<script>if (document.querySelector('.highlight')) document.write('<link rel=\"stylesheet\" href=\"\/assets\/css\/syntax.css\">')</script>
+		<noscript><link rel="stylesheet" href="/assets/css/syntax.css"></noscript>
+		<!-- /Syntax css -->
+
+		<script src="/assets/js/hints.js" async></script>
+		<script src="/assets/js/typo.js" async></script>
+		<script src="/assets/js/loadCSS.js" async></script>
+
+	</body>
+</html>
