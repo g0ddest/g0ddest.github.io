@@ -43,6 +43,7 @@ DNS.1 = www.example.com
 ~~~
 
 Сохраняем как файл cert.conf. Затем запускаем генерацию файла запроса сертификата CSR:
+
 ~~~sh
 openssl req -new -config cert.conf -out cert.csr
 ~~~
