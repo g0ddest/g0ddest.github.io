@@ -117,6 +117,7 @@ cat /etc/odbc.ini
 ~~~
 
 Хм, пустой. Добавляем нужную запись:
+
 ~~~sh
 vim /etc/odbc.ini
 ~~~
@@ -134,13 +135,22 @@ Database = DATABASE
 Port = 1433
 
 [Default]
-Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so</pre>
+Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so
+~~~
+
 А в /etc/odbcinst.ini описываем
-<pre class="brush:shell">[FreeTDS]
-Driver=/usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so</pre>
+
+~~~sh
+[FreeTDS]
+Driver=/usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so
+~~~
+
 SERVERNAME и DATABASE вставьте свои. И вместо "SQL Server" можно использовать свое название. Ну и драйвер может лежать тут: /usr/lib/odbc/libtdsodbc.so
+
 Пробуем подключиться
-<pre class="brush:shell">isql -v "Sql Server" USERNAME@SERVERNAME PASSWORD
+
+~~~sh
+isql -v "Sql Server" USERNAME@SERVERNAME PASSWORD
 ~~~
 
 Успех! Меняем в test.py название на драйвера на FreeTDS.
